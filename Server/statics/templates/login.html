@@ -1,0 +1,39 @@
+ 
+ 
+ <md-content class="login">
+    <md-toolbar md-scroll-shrink >
+    <div class="md-toolbar-tools">
+      <h3>
+         Annual Leave Portal
+      </h3>
+    </div>
+  </md-toolbar>
+ 
+ <div id="loader" class="loader" layout="row" layout-sm="column" layout-align="center center" aria-label="wait" ng-show="loader">
+        <md-progress-circular md-diameter="150" md-mode="indeterminate" ></md-progress-circular>
+        </div>
+    <div class="login-div">
+       <div class="profile-header-container" ng-show="user">   
+            <img ng-src="{{user.photoURL}}" />
+            <p>{{user.email}}</p>
+    </div> 
+    <div class="profile-header-container" ng-show="!user">   
+            <img src="../images/dummyProfilePic.jpg" />
+    </div> 
+     <div ng-show="user">
+            <md-button type="button" class="md-raised md-warn"  ng-click="goToDashboard()">Click Me</md-button>
+    </div> 
+    <div  ng-show="!user">
+            <md-button type="button" class="md-raised md-warn"  ng-click="googleLogin()">Google Login</md-button>
+    </div>
+    </div>
+   
+    
+  </md-content>
+<footer>
+        <md-toolbar class="md-scroll-shrink">
+          <div layout="row" layout-align="center center" flex>
+           Zara Mobility Services
+          </div>
+        </md-toolbar>
+      </footer>
