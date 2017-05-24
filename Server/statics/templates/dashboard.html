@@ -1,101 +1,17 @@
- <md-sidenav class="md-sidenav-left md-whiteframe-z2 "
-        md-component-id="left" >
-    <md-toolbar layout="row">
-     <div class="md-toolbar-tools">
-        <h2>
-          <span>Dashboard</span>
-        </h2>
-        <span flex></span>
-        <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="closeSideNavPanel()">
-          <md-tooltip>Close Side Panel</md-tooltip>
-          <md-icon class="md-default-theme" class="material-icons">&#xE5CD;</md-icon>
-        </md-button>
-       </div>
-    </md-toolbar> 
-    <md-content layout-padding="" >
-       <div class="profile-header-container">   
-                <img ng-src="{{user.photoURL}}"  />
-        </div>
-        <div>
-          <p>{{user.email}}</p>
-        </div>
-    <md-list>
-      <md-subheader class="md-no-sticky">Add Leave</md-subheader>
-      <md-list-item>
-        <md-icon> create </md-icon>
-        <p>Annual Form</p>
-       </md-list-item>
-       <md-list-item>
-        <md-icon> create </md-icon>
-        <p>Sick Form</p>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-subheader class="md-no-sticky">Leave List</md-subheader>
-      <md-list-item>
-        <md-icon> assignment </md-icon>
-        <p>Approved Leave</p>
-      </md-list-item>
-      <md-list-item>
-        <md-icon> assignment </md-icon>
-        <p>Declined Leave</p>
-      </md-list-item>
- </md-list>
- 
-    </md-content> 
-</md-sidenav>
-
- <md-content class="dashboard" >
-    <md-toolbar md-scroll-shrink >
-    <div class="md-toolbar-tools" >
-       <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openSideNavPanel()">
-          <md-tooltip>Side Panel</md-tooltip>
-          <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
-        </md-button>
-      <h3>
-        Annual Leave Portal
-      </h3>
-          <md-menu>
-      <md-button aria-label="Open menu with custom trigger" class="md-icon-button" ng-mouseenter="$mdMenu.open()">
-        <md-icon class="md-default-theme" >chat</md-icon>
-      </md-button>
-      <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
-        <md-menu-item >
-          <md-button >
-            Setting
-          </md-button>
-        </md-menu-item>
-          <md-menu-item >
-          <md-button ng-click="logout()">
-           Logout
-          </md-button>
-        </md-menu-item>
-    </md-menu>
-    </div>
-  </md-toolbar>
-
-      <div>
+<div id="dashboard" >
     
-    <div>
-      <p class="leave-status-bar">
-        <span class="leave-status"><i class="material-icons">event</i> &nbsp; 7 Remaining Annual Leave</span> <span class="leave-status"><i class="material-icons">event</i> &nbsp; 7 Remaining Sick Leave</span>
+    <div class="leave-status-bar">
+        <p class="leave-status"><i class="material-icons">event</i> &nbsp; 14 Remaining Leaves </span> &nbsp; <span class="leave-status"><i class="material-icons">event</i> &nbsp; 7 Remaining Annual Leave</span> <span class="leave-status"><i class="material-icons">event</i> &nbsp; 7 Remaining Sick Leave</p>
       </p>
     </div>
     
     
-    <div class="align-center">
-        <canvas class="chart chart-line align-center" width="800px" height="400"  chart-data="data" chart-labels="labels"  chart-options="options"  
-       	chart-series="series" chart-click="onClick">
-       </canvas> 
-        <div layout="row" layout-align="center center">
-            <h2>Zara Mobility Services</h2>
-        </div>
-    </div>
+<div class="align-center">
+  
+  <canvas class="chart chart-line align-center" width="800px" height="400"  chart-data="data" chart-labels="labels"  chart-options="options"  chart-series="series" chart-click="onClick"> </canvas> 
+  <div layout="row" layout-align="center center">
+      <h2>Zara Mobility Services</h2>
+  </div>
+</div>
 
- </md-content>
-   <footer>
-        <md-toolbar class="md-scroll-shrink">
-          <div layout="row" layout-align="center center" flex>
-           Zara Mobility Services
-          </div>
-        </md-toolbar>
-      </footer>
+</div>

@@ -33,15 +33,7 @@ border-radius: 50%;
 width: 150px;
  }
 
-.dashboard {
-  background: rgb(237,237,240) no-repeat center;
-      background-size: 100%;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0px;
-      left: 0px;
-}
+
 
 .loader {
   width: 100%;
@@ -52,7 +44,6 @@ width: 150px;
 .leave-status {
   background-color: rgb(63,81,181);
   color: white;
-  width: 25%;
   padding: 10px;
   font-weight: bolder;
 }
@@ -65,17 +56,24 @@ width: 150px;
   padding: 10px;
   font-weight: bolder;
 }
+header {
+    position: fixed;
+    height: auto;
+    width: 100%;
+}
 footer{
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
+
 .leave-status-bar{
   margin: 50 auto;
   text-align: center;
   padding :10px;
   
 }
+
 md-menu-bar {
   z-index: 100;  
 }

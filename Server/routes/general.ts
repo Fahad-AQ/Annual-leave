@@ -5,6 +5,45 @@ import {users,company} from "../userModels/userModels";
 let ref = new Firebase('https://salesmanapp.firebaseio.com/');
 
 let router = express.Router()
+var nodemailer = require("nodemailer");
+
+var smtpTransport = nodemailer.createTransport("SMTP", {
+  service: "Gmail",
+  auth: {
+    XOAuth2: {
+      user: "your_email_address@gmail.com", // Your gmail address.
+                                            // Not @developer.gserviceaccount.com
+      clientId: "your_client_id",
+      clientSecret: "your_client_secret",
+      refreshToken: "your_refresh_token"
+    }
+  }
+});
+
+var mailOptions = {
+  from: "your_email_address@gmail.com",
+  to: "my_another_email_address@gmail.com",
+  subject: "Hello",
+  generateTextFromHTML: true,
+  html: "<b>Hello world</b>"
+};
+
+smtpTransport.sendMail(mailOptions, function(error, response) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(response);
+  }
+  smtpTransport.close();
+});
+
+router
+.post('/sendEmail', function(req, res) {
+    let newUser = req.body.email;
+                          
+ 
+
+})
 
 router
 .post('/signup', function(req, res) {

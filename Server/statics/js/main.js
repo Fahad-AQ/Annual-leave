@@ -16,11 +16,31 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "templates/login.html",
       controller: "login"
     })
-
-    .state('dashboard', {
+   .state('app', {
+      url: "/app",
+      abstract : true,
+      templateUrl: "templates/menu.html",
+      controller: "menu",
+     // loginCompulsory : true
+    })
+    .state('app.dashboard', {
       url: "/dashboard",
-      templateUrl: "templates/dashboard.html",
-      controller: "dashboard",
+      views : {
+      "menuContent" : {
+       templateUrl: "templates/dashboard.html",
+       controller: "dashboard",
+       }
+      }
+     // loginCompulsory : true
+    })
+    .state('app.annualForm', {
+      url: "/annualForm",
+      views : {
+      "menuContent" : {
+       templateUrl: "templates/annualForm.html",
+       controller: "annualForm",
+       }
+      }
      // loginCompulsory : true
     })
   
